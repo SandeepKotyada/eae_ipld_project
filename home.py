@@ -26,7 +26,7 @@ def home_page():
     )  # TODO: Add your name
 
     # ----- Profile image file -----
-    profile_image_file_path = "profile.png"  # TODO: Upload your profile image
+    profile_image_file_path = "my_image.jpg"  # TODO: Upload your profile image
 
     try:
         with open(profile_image_file_path, "rb") as img_file:
