@@ -47,7 +47,11 @@ num_missing_directors = movies_df["director"].isna().sum()
 
 # TODO: Ex 2.4: How many different countries are there in the data?
 
+# You will need to fill the NaN (missing) values with the string "Unknown" first.
 movies_df["country"] = movies_df["country"].fillna('Unknown')
+
+# Drop all rows where 'country' is 'Unknown'
+movies_df = movies_df[movies_df["country"] != 'Unknown']
 
 # Then list the unique entries. As some of them are lists of countries already, because that movie/series was produced in multiple countries, 
 # you will need to join with ", " all the elements of the list into a single string, and then split it by ", " to get a list of all the individual countries.
